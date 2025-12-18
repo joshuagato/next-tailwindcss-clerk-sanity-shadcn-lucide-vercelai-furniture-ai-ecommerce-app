@@ -59,7 +59,7 @@ export const orderType = defineType({
                         prepare({ title, quantity, price, media }) {
                             return {
                                 title: title ?? "Product",
-                                subtitle: `Qty: ${quantity} • £${price}`,
+                                subtitle: `Qty: ${quantity} • ₵${price}`,
                                 media,
                             };
                         },
@@ -72,7 +72,7 @@ export const orderType = defineType({
             type: "number",
             group: "details",
             readOnly: true,
-            description: "Total order amount in GBP",
+            description: "Total order amount in GH₵",
         }),
         defineField({
             name: "status",
@@ -158,7 +158,7 @@ export const orderType = defineType({
         prepare({ orderNumber, email, total, status }) {
             return {
                 title: `Order ${orderNumber ?? "N/A"}`,
-                subtitle: `${email ?? "No email"} • £${total ?? 0} • ${
+                subtitle: `${email ?? "No email"} • ₵${total ?? 0} • ${
                     status ?? "paid"
                 }`,
             };
