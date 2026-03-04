@@ -31,7 +31,7 @@ export default function RootLayout({
         >
         {children}
 
-        <script id="visitor-tracker" strategy="afterInteractive">{`
+        <script strategy="afterInteractive">{`
             (async function () {
               const apiUrl = "${apiUrl}";
               const initialFullUrl = window.location.href;
