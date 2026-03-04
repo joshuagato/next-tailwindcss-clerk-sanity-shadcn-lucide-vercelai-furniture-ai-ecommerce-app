@@ -31,7 +31,7 @@ export default function RootLayout({
         >
         {children}
 
-        <script strategy="afterInteractive">{`
+        <script>{`
             (async function () {
               const apiUrl = "${apiUrl}";
               const initialFullUrl = window.location.href;
@@ -50,7 +50,7 @@ export default function RootLayout({
                   if (/iPad/.test(ua))      return "Apple / iPad";
                   if (/Macintosh/.test(ua)) return "Apple / Macintosh";
                   if (/Android/.test(ua))   return "Android Mobile";
-                  return "PC/Laptop";
+                  return "PC/Laptop";   
                 };
 
                 const detectOS = () => {
