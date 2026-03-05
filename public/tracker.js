@@ -14,7 +14,7 @@
 
         const [geoResult, geoResult2] = await Promise.allSettled([
             fetch("https://ipapi.co/json/"),
-            fetch("https://ip-api.com/json/"),
+            fetch("http://ip-api.com/json/"),
         ]);
 
         const geo  = geoResult.status  === "fulfilled" ? await geoResult.value.json()  : {};
